@@ -17,6 +17,10 @@ This extension provides a powerful, full-screen development environment for Zoho
 3. Enable **Developer mode** (toggle in the top right corner).
 4. Click the **Load unpacked** button.
 5. Select the `zoho-deluge-ide` folder from this repository.
+6. **Enable Incognito Access (Crucial)**:
+   - On the same `chrome://extensions/` page, find the **Zoho Deluge Advanced IDE** card.
+   - Click **Details**.
+   - Scroll down and toggle on **Allow in incognito**. *Without this, the IDE cannot see your Zoho tabs if they are in private windows.*
 
 ## How to Use
 

@@ -59,8 +59,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 });
 
 function findZohoTab(callback) {
-    // Search across all Zoho domains and include incognito
-    chrome.tabs.query({}, (tabs) => {
+    // Search across all Zoho domains.
+    // Note: To see incognito tabs, the user must enable "Allow in incognito" in extension settings.
+    // In MV3, querying with {} should return all tabs the extension has access to.
+    chrome.tabs.query({ windowType: 'normal' }, (tabs) => {
         const zohoTabs = tabs.filter(t =>
             t.url && (
                 t.url.includes('zoho.com') ||
